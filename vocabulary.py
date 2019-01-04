@@ -18,7 +18,6 @@ def cluster():
             flags = cv.KMEANS_RANDOM_CENTERS
             compactness, labels, centers = cv.kmeans(features, 50, None, criteria, 20, flags)
 
-#             root = file_path.split('.')[0]
             save_name = os.path.join(save_path, d.split('.')[0] + '_vocabulary.npy')
             np.save(save_name, (labels, centers))
     

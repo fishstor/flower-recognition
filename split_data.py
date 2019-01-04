@@ -66,3 +66,7 @@ def split_data(path):
             cv.imwrite(image_path, img)
             
     print('Done!')
+
+
+if __name__ == '__main__':
+    split_data('flowers')

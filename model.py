@@ -1,6 +1,7 @@
 import pickle
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
+from get_sift_feature import calc_sift_feature
 
 
 def get_sift_vector(img, directory):
@@ -51,7 +52,9 @@ def train_model():
     
     with open('datasets/flowers/model.pkl', 'wb') as f:
         pickle.dump(grid_search, f)
-#     model = SVC(gamma=0.001, C=10)
-#     model.fit(feature_vectors, labels)
-    # print('score:', model.score(feature_vectors, labels))
+
     return grid_search
+
+
+if __name__ == '__main__':
+    train_model()

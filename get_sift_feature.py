@@ -34,3 +34,7 @@ def get_sift_feature(path):
             np.save(file_name, feature_set)
     
     print('Done!')
+
+
+if __name__ == '__main__':
+    get_sift_feature('flowers')

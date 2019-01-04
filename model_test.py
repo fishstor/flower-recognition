@@ -1,9 +1,10 @@
 import cv2 as cv
 import os
 import numpy as np
+from model import *
 
 
-def test_model(svm):
+def validate_model(svm):
     test_path = 'datasets/flowers/test'
     dirs = os.listdir(test_path)
     # print(dirs)
@@ -31,3 +32,6 @@ def test_model(svm):
     accuracy = n_correct / len(res)
     print('accuracy:', accuracy)
     
+
+if __name__ == '__main__':
+    validate_model()
